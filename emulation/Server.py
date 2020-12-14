@@ -47,7 +47,7 @@ while True:
             try:
                 Data_get_dict = eval(data_get)
                 print(len(Data_get_dict))
-                Data_get_dict['Time_STAMP Server'] = datetime.datetime.now()
+                Data_get_dict['Time_STAMP Server'] = str(datetime.datetime.now())
             except:
                 Data_get_dict= str(data_get.decode("utf-8")) + '{Time_STAMP Server: ' + str(datetime.datetime.now()) + '}'
             f.write(str(Data_get_dict)+'\r\n')
